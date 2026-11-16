@@ -3,7 +3,7 @@
 Variabili d'ambiente (opzionali):
   ECB_REPO  cartella del repository Valleri ESTRATTO dallo zip Z1
             (ECB-monetary-surprises-extraction-llm--main/, contiene data/ e i 2 notebook)
-  ECB_DATI  cartella 'Tesi Valleri/dati' (accounts, economic_bulletins, monthly_bulletins,
+  ECB_DATI  cartella 'dati-tesi-valleri/dati' (accounts, economic_bulletins, monthly_bulletins,
             press_conferences, all_ECB_speeches.csv)
   ECB_OUT   cartella di output degli script (default: ./out)
 """

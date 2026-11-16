@@ -4,10 +4,12 @@ Data: 2026-11-13. Gli script non modificano alcun file originale: leggono i dati
 Contesto e risultati: `../controllo_replicabilita.md`, `../inventario.md` §8, `../domande_aperte.md`.
 
 ## Preparazione
-1. Estrarre lo zip `Tesi Valleri/git-hub/ECB-monetary-surprises-extraction-llm--main.zip` (Z1, coerente con la tesi) in una cartella; contiene `data/` e due notebook.
+Percorso corrente dei dati: `C:\Users\User\Documents\GitHub\textual-information\central bank communication\dati-tesi-valleri\` (es. `ECB_DATI=...\dati-tesi-valleri\dati`; lo zip Z1 è in `...\dati-tesi-valleri\git-hub\`).
+
+1. Estrarre lo zip `dati-tesi-valleri/git-hub/ECB-monetary-surprises-extraction-llm--main.zip` (Z1, coerente con la tesi) in una cartella; contiene `data/` e due notebook.
 2. Impostare le variabili d'ambiente (o modificare `_common.py`):
    - `ECB_REPO` = cartella estratta `ECB-monetary-surprises-extraction-llm--main`
-   - `ECB_DATI` = `Tesi Valleri/dati` (serve `all_ECB_speeches.csv`; per lo script 02 anche le cartelle `accounts` e `press_conferences`, altrimenti usa gli elenchi in `liste/`)
+   - `ECB_DATI` = `dati-tesi-valleri/dati` (serve `all_ECB_speeches.csv`; per lo script 02 anche le cartelle `accounts` e `press_conferences`, altrimenti usa gli elenchi in `liste/`)
    - `ECB_OUT` = cartella di output (default `./out`)
 3. Eseguire da questa cartella: `python 01_lp_replication.py` ecc. (ognuno è indipendente).
 

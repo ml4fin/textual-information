@@ -1,7 +1,7 @@
 # Controllo di replicabilità – Tesi Valleri (ECB Communications as Monetary Shocks)
 
 Legenda: **[doc]** = scritto nei documenti/file; **[inferenza]** = mia deduzione.
-Fonti: tesi (`papers/ECB Communications...pdf`), cartella dati OneDrive `ecb-communications/Tesi Valleri/`, repository GitHub `enricovalleri-01/ECB-monetary-surprises-extraction-llm-` (snapshot `git-hub/ECB-monetary-surprises-extraction-llm--main.zip`, coerente con GitHub).
+Fonti: tesi (`papers/Valleri E. - ECB Communications...pdf`), cartella dati OneDrive `dati-tesi-valleri/`, repository GitHub `enricovalleri-01/ECB-monetary-surprises-extraction-llm-` (snapshot `git-hub/ECB-monetary-surprises-extraction-llm--main.zip`, coerente con GitHub).
 
 ## 1. Esito sintetico
 - **Dati**: quasi tutti presenti; manca la parte macro grezza (HICP = Harmonised Index of Consumer Prices, PIL, disoccupazione) e il codice che costruisce `lp_dataset.csv`.

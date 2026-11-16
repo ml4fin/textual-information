@@ -1,4 +1,4 @@
-# Inventario della cartella `03-llm-monetary-policy`
+# Inventario della cartella `central bank communication`
 
 Data: 2026-10-01. Modalità: sola lettura. Nessun file originale è stato spostato, rinominato, modificato o eliminato. Unico file creato: questo inventario, in `lavoro_claude/`.
 
@@ -6,11 +6,24 @@ Data: 2026-10-01. Modalità: sola lettura. Nessun file originale è stato sposta
 
 **Versione 3 (2026-11-13).** Aggiunta la §8 (verifica di replicabilità della tesi: dati, codice, discrepanze) e corretti alcuni punti precedenti (vedi §8.4). Il dettaglio è in `controllo_replicabilita.md`, le domande aperte in `domande_aperte.md`, gli script in `code/` (descritti in `code/README.md`).
 
+**Versione 4 (2026-11-13) – nuova posizione.** Tutto il materiale è stato trasferito in `C:\Users\User\Documents\GitHub\textual-information\central bank communication\` (repository Git `textual-information`). Il nome precedente della cartella era `03-llm-monetary-policy` (poi `02-llm-monetary-policy`). Mappa dei percorsi (le sezioni 1–8 usano ancora i codici P1–P3, E1–E3, Z1–Z2):
+
+| Codice | Posizione precedente | Posizione attuale (relativa a `central bank communication/`) |
+|---|---|---|
+| P1 | `papers/Baglioni A. - ...pdf` | `papers/Baglioni A. - Monetary Policy Implementation.pdf` |
+| P2 | `papers/ECB Communications as Monetary Shocks...pdf` | `papers/Valleri E. - ECB Communications as Monetary Shocks...pdf` |
+| P3 | `papers/Fernandez-Fuertes R. - ...pdf` | invariato |
+| (nuovo) | – | `papers/Didisheim A. et al. - The Inefficient Pricing of News.pdf` (≡ E1/E3 `ssrn-6540399.pdf`) |
+| E2 | OneDrive `ecb-communications/Tesi Valleri/` | `dati-tesi-valleri/` (`dati/`, `docs/`, `git-hub/`) |
+| Z1, Z2 | `…/git-hub/*.zip` | `dati-tesi-valleri/git-hub/*.zip` |
+| E1, E3 (e i 3 `.lnk`) | Google Drive `01-embedding-regression`, OneDrive `News Embedding` | **non nella nuova cartella** (vedi §9) |
+| Lavoro di Claude | `lavoro_claude/` | `lavoro_claude/` (invariato, con `code/`) |
+
 Convenzioni:
 - Ogni informazione è seguita dal file di provenienza tra parentesi quadre, es. `[P2]`.
 - Ciò che è scritto nel documento è riportato senza marcatura. Le mie deduzioni sono marcate **[inferenza]**.
 - "non indicato" = non ricavabile dal documento (o dalla parte che ho letto).
-- Codici file: **P1** = `papers/Baglioni A. - Monetary Policy Implementation.pdf`; **P2** = `papers/ECB Communications as Monetary Shocks...pdf` (tesi Valleri); **P3** = `papers/Fernandez-Fuertes R. - Monetary Policy Shocks A New Hop LLM and Central Bank Communication.pdf`; **L1/L2/L3** = i tre collegamenti `.lnk`.
+- Codici file: **P1** = `papers/Baglioni A. - Monetary Policy Implementation.pdf`; **P2** = `papers/Valleri E. - ECB Communications as Monetary Shocks...pdf` (tesi Valleri); **P3** = `papers/Fernandez-Fuertes R. - Monetary Policy Shocks A New Hop LLM and Central Bank Communication.pdf`; **L1/L2/L3** = i tre collegamenti `.lnk`.
 
 ## 0. Come ho suddiviso il lavoro e limiti di copertura
 
@@ -57,7 +70,7 @@ I due paper citati nelle istruzioni di progetto (**Chen et al.** e **Didisheim e
 
 ## 2. TESI PRECEDENTI
 
-### 2.1 Valleri E. — *ECB Communications as Monetary Shocks: A Multi-Agent LLM Framework and Asymmetric Transmission Analysis* — `papers/ECB Communications as Monetary Shocks...pdf` [P2]
+### 2.1 Valleri E. — *ECB Communications as Monetary Shocks: A Multi-Agent LLM Framework and Asymmetric Transmission Analysis* — `papers/Valleri E. - ECB Communications as Monetary Shocks...pdf` [P2]
 
 Nota: sta nella cartella `papers/` ma è una **tesi magistrale** (M.Sc. Applied Economics and Markets, Università di Bologna, relatore Prof. Umberto Cherubini, a.a. 2025/2026, autore Enrico Valleri) [P2, frontespizio]. PDF 64 pp., LaTeX, testo estraibile, 927.504 B, creato il 27 giugno 2026 [P2, metadati].
 
@@ -69,7 +82,7 @@ Nota: sta nella cartella `papers/` ma è una **tesi magistrale** (M.Sc. Applied 
 | Risultati | Surprise con media vicina a zero (−1,1 bp), volatilità minima sotto Draghi, massime nei rialzi da 75 bp di settembre/ottobre 2022. A h=9 mesi una surprise hawkish di 25 bp riduce l'HICP di 0,857 pp, quella dovish la aumenta di 0,480 pp (≈56%, rapporto ≈1,8:1); Wald p = 0,009; asimmetria significativa al 10% in 14 orizzonti su 24 (concentrati in h=1–16) [P2, abstract, §5.2–5.3, Tab. 5.1]. Robustezza: con dummy post-2015 −0,910; escludendo 2022–2023 −1,103 [P2, §3.6, §5.2]. |
 | Limiti dichiarati | (1) **Break strutturale a gennaio 2015** (Accounts al posto degli Intro Statement): F-test significativo (p=0,014/0,006; media pre −3,7 bp vs post +5,0 bp), non separabile dal cambio di regime (ZLB, QE). (2) Pesi di aggregazione a priori, non stimabili senza inferenza circolare. (3) **Bias temporale/outcome leakage** dell'LLM (Gemini addestrato su dati oltre il campione; non testabile senza un modello addestrato pre-1999). Inoltre: possibile *bad control* (PIL contemporaneo), HAC inaffidabile per h ≥ 18, stima "meeting-month" non pienamente mensile, i 24 test di Wald non sono indipendenti, bin che non coprono −10 bp e +75 bp (≤3 osservazioni), PIL in vintage rivisto, stime da leggere come associazioni condizionali e non come effetti causali [P2, §3.5, §5.1, §5.3, §6.2]. |
 | Sviluppi futuri suggeriti | (i) Misura complementare di mercato dalle opzioni su Euribor (caplet, Black 1976; dati Puigvert-Gutiérrez & de Vincent-Humphreys 2010 per 1999–2010, Bloomberg/Refinitiv dopo) per scomporre la parte già prezzata; (ii) LP panel su paesi core vs periferici; (iii) analisi della trasparenza per era presidenziale tramite l'entropia posteriore di Agent II; (iv) specifica con PIL ritardato senza dummy; test congiunto di Wald o bande simultanee; (v) diagnosi di leakage via correlazione fra accuratezza modale e notorietà della riunione [P2, §3.5, §5.1, §5.3, §6.3]. |
-| Parti riutilizzabili | Architettura e mappatura documenti per sotto-periodo (Tab. 3.1); prompt degli agenti IM e IB (Appendice B, p. 49–52, non letti per intero); regole di preprocessing (chunking, estrazione dell'Intro Statement tramite la frase "We are now at your disposal for questions"; correzione dei 11 casi di data effettiva dei tassi); tabelle di robustezza 3.2–3.4 e 5.2; checkpoint JSON per riunione [P2]. **Codice, notebook e dati NON sono nella cartella collegata, ma sono in E2 `ecb-communications/Tesi Valleri/`** (corpus, 2 zip di repository, serie derivate): vedi §3.1 e §4.1. P2 rinvia a un "replication code" [P2, nota 1 p. 34] e dichiara Python su Google Colab con documenti su Google Drive [P2, §3.5]. |
+| Parti riutilizzabili | Architettura e mappatura documenti per sotto-periodo (Tab. 3.1); prompt degli agenti IM e IB (Appendice B, p. 49–52, non letti per intero); regole di preprocessing (chunking, estrazione dell'Intro Statement tramite la frase "We are now at your disposal for questions"; correzione dei 11 casi di data effettiva dei tassi); tabelle di robustezza 3.2–3.4 e 5.2; checkpoint JSON per riunione [P2]. **Codice, notebook e dati NON sono nella cartella collegata, ma sono in E2 `dati-tesi-valleri/`** (corpus, 2 zip di repository, serie derivate): vedi §3.1 e §4.1. P2 rinvia a un "replication code" [P2, nota 1 p. 34] e dichiara Python su Google Colab con documenti su Google Drive [P2, §3.5]. |
 | Verifiche con i file di E2 | **Confermato:** 90 Accounts, 87 Economic Bulletin, 192 Monthly Bulletin, 267 conferenze (178 pre-2015), 312 riunioni, media −1,1 bp (coincide col repo Z1), LP h=9 −0,857/+0,480 (coincide con `lp_results_hicp.csv`). **Differenze:** 2.848 discorsi = 2.995 righe del CSV meno 147 senza testo (non dichiarato in P2); il CSV non contiene discorsi di governatori NCB, ma P2 assegna loro peso 0,55 [P2 §3.2; E2]; il repo Z2 (più vecchio) ha media −1,28 bp. Vedi §3.1, §4.1. |
 | Incoerenze interne | Abstract/§3.4: pipeline con "due agenti LLM + due moduli deterministici", mentre P3 usa quattro agenti LLM; ciò è una scelta dichiarata dalla tesi, non un errore. "267 trascrizioni 1999–2026" a fronte di campione che termina a dicembre 2025. 90 Accounts vs 87 riunioni post-2015 (spiegata nel testo). Tab. 2.1 attribuisce a P3 il periodo 2000–2024, mentre P3 dichiara 1996–2025 [P2, P3]. |
 
@@ -86,7 +99,7 @@ Le tre cartelle puntate dai collegamenti sono state aperte (accesso concesso il 
 - campione di 5 HTML di conferenze stampa, 8 PDF di Accounts (inclusi tutti quelli con nome anomalo) e 4 PDF di bollettini (2 Economic, 2 Monthly);
 - per gli altri file: solo nome, data e dimensione (da elenco), non il contenuto. Perciò conteggi e anomalie dei restanti ~620 file qui sotto sono **da nomi e dimensioni**, non da lettura del testo.
 
-### 3.1 E2 · `ecb-communications/Tesi Valleri/` (641 file, ~0,74 GB) — materiale della tesi di Valleri
+### 3.1 E2 · `dati-tesi-valleri/` (641 file, ~0,74 GB) — materiale della tesi di Valleri
 
 | Sottocartella | Contenuto | N. file | Dimensione | Formato |
 |---|---|---|---|---|
@@ -143,7 +156,7 @@ Struttura numerata (01-notebooks, 02-lecture-notes, 03-code, 04-working, 05-pict
 
 ## 4. CODICE E ALTRO
 
-### 4.1 Repository di codice (2 zip in E2, `Tesi Valleri/git-hub/`)
+### 4.1 Repository di codice (2 zip in E2, `dati-tesi-valleri/git-hub/`)
 
 | | `ECB-monetary-surprises-extraction-llm--main.zip` (**Z1**) | `ECB-monetary-surprises-extraction-llm-pipeline-main.zip` (**Z2**) |
 |---|---|---|
@@ -194,7 +207,7 @@ Per i quattro paper di E1 ho letto soltanto frontespizio, abstract e le prime pa
 
 | Caso | Dettaglio | Tipo |
 |---|---|---|
-| Tesi Valleri | `papers/ECB Communications...pdf` ≡ `ecb-communications/Tesi Valleri/docs/ECB Communications...pdf` | **duplicato esatto** (md5 `a93576f7…`) |
+| Tesi Valleri | `papers/Valleri E. - ECB Communications...pdf` ≡ `dati-tesi-valleri/docs/ECB Communications...pdf` | **duplicato esatto** (md5 `a93576f7…`) |
 | Chen / Didisheim / Tang | E1 ≡ E3 `07-papers` (nomi diversi: `ssrn-4416687.pdf`, `ssrn-6540399.pdf`, `2411.14708v3.pdf`) | **duplicati esatti** (3 coppie) |
 | `purge.bat` | E1 ≡ E3 `02-lecture-notes` | **duplicato esatto** |
 | Z1 vs Z2 | repository diversi con output del pipeline diversi | **quasi-duplicati non equivalenti** |
@@ -219,7 +232,7 @@ Nota: P1 (Baglioni) è nella cartella collegata e non ha copie altrove.
 | `lavoro_claude/` (creata da me) | – | – | – | – | – | – | – | – | – | 1 (inventario.md) |
 | E1 `01-embedding-regression` | 4 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 6 |
 | E3 `News Embedding` (tot.) | 3 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 5 |
-| E2 `ecb-communications/…/dati/accounts` | 0 | 90 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 90 |
+| E2 `dati-tesi-valleri/…/dati/accounts` | 0 | 90 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 90 |
 | E2 `…/dati/economic_bulletins` | 0 | 87 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 87 |
 | E2 `…/dati/monthly_bulletins` | 0 | 192 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 192 |
 | E2 `…/dati/press_conferences` | 0 | 0 | 267 | 0 | 0 | 0 | 0 | 0 | 0 | 267 |
@@ -313,3 +326,26 @@ Sì: `ECB_Pipeline_MASTER.ipynb` (pipeline) e `ECB_LocalProjections.ipynb` (LP).
 ### 8.4 Correzioni rispetto alle versioni precedenti
 - Economic Bulletin 2015–2025 **completi** (non manca l'autunno 2025).
 - Conteggio dei discorsi con testo: 2.847 (2.995 righe − 148 vuote) nel ricalcolo dello script 02; in precedenza avevo scritto 2.848 (147 NaN): la differenza è una riga con testo vuoto ma non NaN.
+
+---
+
+## 9. Controllo del trasferimento (2026-11-13)
+
+Confronto tra la vecchia cartella OneDrive `ecb-communications/Tesi Valleri/` (ancora accessibile) e `dati-tesi-valleri/` nella nuova posizione, per nome relativo e dimensione in byte; md5 per i file chiave.
+
+| Verifica | Esito |
+|---|---|
+| File di E2 (accounts 90, economic_bulletins 87, monthly_bulletins 192, press_conferences 267, CSV discorsi 1, docx 1, PDF tesi 1, zip 2 = **641**) | **Tutti presenti**, 0 mancanti, 0 con dimensione diversa; totale 745.123.482 B identico |
+| md5 della tesi (`a93576f7…`), copia in `docs/` e in `papers/` | Uguali tra loro e al valore dell'inventario v2 |
+| md5 di P3 Fernández-Fuertes (`52075be8…`) | Uguale all'inventario v2 |
+| md5 di CSV discorsi, docx, due zip (nuova posizione) | CSV `2b345329…`, docx `c199849a…`, Z1 `c6bca9ed…`, Z2 `fa8e558f…`; il confronto con la vecchia posizione via shell non è stato possibile (OneDrive non montato), ma dimensioni identiche |
+| Baglioni (P1) | Presente (4.775.426 B; md5 `50cd0dc1…`); non confrontabile con la copia precedente perché la vecchia cartella non esiste più, nessun md5 registrato in precedenza |
+| Output di Claude in `lavoro_claude/` | Presenti: inventario, controllo_replicabilita, domande_aperte, `code/` (7 file + `liste/` 2 file) |
+| File nuovi | `README.md` (2 copie, 84 B ciascuna: "Textual Information, Market Expectations, and Asset Pricing"); paper Didisheim et al. in `papers/` |
+
+**Da verificare / possibili perdite (non nella nuova cartella `central bank communication`):**
+1. **Tang et al.** (`2411.14708v3.pdf`, 1.357.999 B, ex E1/E3) e **Wang et al.** (`Improving Text Embeddings with LLMs`, ex E1): non trovati nella nuova cartella; Tang esiste ancora nella vecchia `News Embedding` su OneDrive (`07-papers/2411.14708v3.pdf`); **Wang non l'ho trovato in nessun luogo accessibile** (la vecchia cartella E1 su Google Drive non esiste più al percorso precedente). Per Wang non ho un md5 in inventario. **[inferenza]** il file potrebbe essere stato spostato altrove o non copiato.
+2. **Chen et al.** (E1 `Chen Y. et al. - Expected Returns and Large Language Models.pdf`, 7.560.555 B): non in `central bank communication`, ma presente (stessa dimensione) in `textual-information/news embedding/07-papers/`.
+3. **`embedding_concepts_v0.tex`** (32.599 B) e `purge.bat` (133 B): presenti in `textual-information/news embedding/08-other/` (stesse dimensioni; confronto per dimensione, non md5).
+4. **I tre collegamenti `.lnk`** non esistono più: erano riferimenti ai vecchi percorsi, ora obsoleti.
+5. La cartella `news embedding` della nuova posizione (altro progetto, con codice di una tesi su rischi emergenti) non fa parte di questo inventario.
